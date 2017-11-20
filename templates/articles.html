@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+http://localhost:8888/edit/Documents/Projects/templates/articles.html#
+{% block body %}
+<h1> Latest Blogs </h1>
+<ul class="list-group">
+{%  for article in articles %}
+    
+    <li>
+    <a href="article/{{article.id}}" class="btn btn-success btn-lg">{{article.title }} </a></li>
+    <p></p>
+{%  endfor %}
+</ul>
+{% endblock %}
+
+
+<li class="list-group-item"><a href="article/{{article.id}}">{{article.title }}</a></li>
